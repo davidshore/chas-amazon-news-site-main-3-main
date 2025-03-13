@@ -19,7 +19,7 @@ export default function Home({ popularMovies }) {
 
 export async function getServerSideProps() {
   const url = 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1';
-  const APIKey = process.env.NEXT_PUBLIC_API_KEY;
+  const APIKey = process.env.API_KEY;
   const options = {
     method: 'GET',
     headers: {

@@ -2,7 +2,7 @@ import DetailPage from '@/components/DetailPage';
 
 export async function getStaticPaths() {
   const url = `https://api.themoviedb.org/3/movie/popular?language=en-US`;
-  const APIKey = process.env.NEXT_PUBLIC_API_KEY;
+  const APIKey = process.env.API_KEY;
   const options = {
     method: 'GET',
     headers: {
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const url = `https://api.themoviedb.org/3/movie/${params.movieId}?language=en-US`;
-  const APIKey = process.env.NEXT_PUBLIC_API_KEY;
+  const APIKey = process.env.API_KEY;
   const options = {
     method: 'GET',
     headers: {
